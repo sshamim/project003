@@ -29,11 +29,13 @@ jobs:
     # Install Yarn
     - uses: borales/actions-yarn@v2.0.0
       with:
-        cmd: install # will run 'yarn insall' command
+        cmd: install # will run `yarn install` command
+
        
     # Build React App with Yarn
-    - name: Build React App
-      run: yarn build
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: build # will run `yarn build` command
        
     # Install Surge
     - name: Install Surge
