@@ -27,13 +27,15 @@ jobs:
         node-version: 14
         
     # Install Yarn
-    - name: GitHub Action for Yarn
-      uses: Borales/actions-yarn@v2.3.0
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: install # will run `yarn install` command
 
        
     # Build React App with Yarn
-    - name: Build React App
-      run: yarn build
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: build # will run `yarn build` command
        
     # Install Surge
     - name: Install Surge
