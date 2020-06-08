@@ -27,9 +27,9 @@ jobs:
         node-version: 14
         
     # Install Yarn
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: install # will run 'yarn insall' command
+    - name: GitHub Action for Yarn
+      uses: Borales/actions-yarn@v2.3.0
+
        
     # Build React App with Yarn
     - name: Build React App
